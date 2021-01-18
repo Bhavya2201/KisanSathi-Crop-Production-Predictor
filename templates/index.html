@@ -1,0 +1,578 @@
+<html>
+    <head>
+        <title>
+            Kisan Sathi
+        </title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+      <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background-color: #ffffff;
+      
+}
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.nav {
+  background: #fff;
+  width: 100%;
+  height: 55px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 5px 5px 40px;
+  transition: height .5s ease-in-out;
+  position: fixed;
+}
+.nav-brand, .nav-link, .nav-collapse {
+  display: inline-block;
+}
+.nav-brand, .nav-link {
+  color: #000;
+  text-decoration: none;
+  line-height: 55px;
+  padding: 0 1rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.nav-brand {
+      font-size: 2rem;
+    font-weight: 900;
+    color: #416d05;
+}
+.nav-brand:hover {
+      font-size: 2rem;
+    font-weight: 900;
+   color: #416d05;
+    text-decoration: none !important;
+}
+.nav-link {
+  font-size: 1rem;
+}
+.nav-collapse {
+  float: right;
+}
+.toggler {
+  float: right;
+  width: 40px;
+  height: 18px;
+  margin: 18.5px 0;
+  background: none;
+  border: none;
+  outline: none;
+  display: none;
+  opacity: 0.8;
+}
+.toggler span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  position: relative;
+  transition: .25s ease-in-out;
+}
+.toggler span:nth-child(1) {
+  top: -7.5px;
+}
+.toggler span:nth-child(2) {
+  top: 0;
+}
+.toggler span:nth-child(3) {
+  top: 7.5px;
+}
+
+.nav-brand:hover, .nav-link:hover, .toggler:hover, 
+.nav-brand:focus, .nav-link:focus, .toggler:focus {
+  opacity: 1;
+}
+
+.nav.open .toggler span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.nav.open .toggler span:nth-child(2) {
+  transform: translateX(-100%);
+  width: 0;
+  opacity: 0;
+}
+.nav.open .toggler span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+.nav.open {
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .nav-collapse, .nav-link {
+    float: none;
+    display: block;
+  }
+  .nav-link {
+    text-align: center;
+  }
+  .toggler {
+    display: block;
+  }
+}
+
+.hero_clr{
+    color: #589507;
+    font-weight: 900;
+}
+
+.ex_btn{
+  background-color: #589507; color: #FFF;
+}
+
+.content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.footers{
+ 
+}
+.fintro{
+  font-size: 1rem;
+}
+.ft_rsm{
+  font-weight: 900;
+  font-size: 2rem;
+  color: #678a37;
+}
+
+.se_imgg{
+  width: 100%;
+}
+
+
+.lgform{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+.totalbox{
+  width: 40%;
+  height: auto;
+
+  margin: auto;
+  padding: 10px 30px; 
+  background: #fff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(57, 255, 20, 0.2), 0 5px 5px 0 rgba(57, 255, 20, 0.24);
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+outline: 0;
+background: #f2f2f2;
+}
+
+.boxcheckbox{
+margin-top: 10px;
+}
+
+button{
+margin-top: 20px;
+}
+
+.loginbtn{
+  background: #003399;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+.loginbtn:hover,
+.loginbtn:focus{
+  background:  #003399;
+}
+
+.boxcheckbox label{
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .totalbox{
+      width: 90%;
+  }
+}
+
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  right: 10px;
+  font-size: 32px;
+  font-size: 5rem;
+  opacity: 0.3;
+}
+
+
+.label-container{
+  
+  display:table;
+  
+}
+
+.label-text{
+  color:#FFF;
+  background:rgba(51,51,51,0.5);
+  display:table-cell;
+  vertical-align:middle;
+  padding:10px;
+  border-radius:3px;
+}
+
+.label-arrow{
+  display:table-cell;
+  vertical-align:middle;
+  color:#333;
+  transform: rotate(180deg);
+  opacity:0.5;
+}
+</style>
+
+    </head>
+    <body>
+      <section>
+      <nav class='nav' id="navv">
+        <div class='container'>
+          <a class='nav-item nav-brand' href='#'>Kisan Sathi</a>
+          <button class='toggler'>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class='nav-collapse' id="navv">
+            <a class='nav-item nav-link sss' href='#home'>Home</a>
+            <a class='nav-item nav-link sss' href='#about'>About</a>
+            <a class='nav-item nav-link sss' href='#predict'>Predict</a>
+              <a class='nav-item nav-link sss' href='#team'>Team</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section id="home">
+      <div class="container  pt-5  pb-4">
+        <div class="row">
+          <div class="col-md-6 order-md-6">
+            <img src="https://drive.google.com/uc?id=1sPe30Jiaecs0BaGJ6WXVE35qR7f8NhuR" alt="" class="w-100 pt-5" />
+          </div>
+          <div class="col-md-6 order-md-1">
+            <div class="row align-items-center h-100">
+              <div class="col">
+                <h1 class="display-4 hero_clr">Kisan Sathi</h1>
+                <p class="lead">Predict crop @ just one click
+                  <br /><br />
+                  <a href="#about" type="button" class="btn rounded ex_btn" >EXPLORE</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="about">
+      <div class="col-10 mx-auto text-center mt-5 ">
+        <h1>What we do?</h1>
+        <p class="text-justify">Due to the impact of climate change in Gujarat, most of the agricultural crops are being badly affected in terms of their performance over a period of the last two decades. Predicting the crop yield in advance of its harvest would help the policy makers and farmers for taking appropriate measures for marketing and storage. </p>
+        <br>
+        <br>
+        <p class="text-justify">This project will help the farmers to know the yield of their crop before cultivating onto the agricultural field and thus help them to make the appropriate decisions. It attempts to solve the issue by building a prototype of an interactive prediction system. Implementation of such a system with an easy-to-use web based graphic user interface and the machine learning algorithm will be carried out. The results of the prediction will be made available to the farmer. Thus, for such kind of data analytics in crop prediction, there are different techniques or algorithms, and with the help of those algorithms we can predict crop yield. Random forest algorithm is used. By analysing all these issues and problems like weather, temperature, rainfall, there is no proper solution and technologies to overcome the situation faced by us.</p>
+        
+      </div>
+    </section>
+    <section id="predict">
+      <div class="col-10 mx-auto  mt-5 ">
+        <div class="text-center">
+        <h1>Predict</h1>
+     </div>
+        <div class="row">
+      
+            <center><form class="w-100" action="/predict" method="post">
+              <div> 
+              <select id="District" name="a" class="form-control  col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                        <option selected="" value="" disabled selected>Select District</option>
+                        <option value="0">Ahmedabad</option>
+                        <option value="1">Amreli</option> 
+                        <option value="2">Anand</option>
+                        <option value="3">Banaskatha</option> 
+                        <option value="4">Bharuch</option> 
+                        <option value="5">Bhavnagar</option> 
+                        <option value="6">Dang</option> 
+                        <option value="7">Dohad</option>  
+                        <option value="8">Gandhinagar</option> 
+                        <option value="9">Jamnagar</option>
+                        <option value="10">Junagadh</option>  
+                        <option value="11">Kutch</option> 
+                        <option value="12">Kheda</option> 
+                        <option value="13">Mehsana</option> 
+                        <option value="14">Narmada</option> 
+                        <option value="15">Navsari</option>
+                        <option value="16">Panch Mahal</option>
+                        <option value="17">Patan</option>
+                        <option value="18">Porbandar</option>
+                        <option value="19">Rajkot</option>
+                        <option value="20">Sabarkatha</option>
+                        <option value="21">Surat</option>
+                        <option value="22">Surendranagar</option>
+                        <option value="23">Tapi</option>
+                        <option value="24">Vadodara</option>
+                        <option value="25">Valsad</option>
+                              </select>
+                             
+              <select id="Season" name="c" class="form-control  col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                        <option selected="" value="" disabled selected>Select Season</option>
+                        <option value="0">Kharif</option>
+                        <option value="1">Rabi</option> 
+                        <option value="2">Summer</option>   
+                        <option value="3">Whole Year</option>          
+                              </select>
+                              
+              <select id="crop" name="d" class="form-control col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                        <option selected="" value="" disabled selected>Select Crop</option>
+                        <option value="0">Arhar/Tur</option> 
+                        <option value="1">Bajra</option>
+                        <option value="5">Dry chillies</option>
+                        <option value="8">Groundnut</option>
+                        <option value="10">Jowar</option>
+                        <option value="12">Moong(Green Gram)</option>
+                        <option value="13">Moth</option>
+                        <option value="17">Other Kharif pulses</option>
+                        <option value="29">Urad</option>
+                        <option value="7">Gram</option>
+                        <option value="22">Rapeseed &Mustard</option>
+                        <option value="30">Wheat</option>
+                        <option value="2">Banana</option>
+                        <option value="3">Castor seed</option>
+                        <option value="4">Cotton(lint)</option>
+                        <option value="11">Maize</option>
+                        <option value="19">Potato</option>
+                        <option value="20">Pulses total</option>
+                        <option value="23">Rice</option>
+                        <option value="24">Sesamum</option>
+                        <option value="27">Sugarcane</option>
+                        <option value="28">Tobacco</option>
+                        <option value="16">Other Cereals & Millets</option>
+                        <option value="25">Small millets</option>
+                        <option value="14">Oilseeds total</option>
+                        <option value="15">Onion</option>
+                        <option value="9">Guar seed</option>
+                        <option value="31">other oilseeds</option>
+                        <option value="6">Garlic</option>
+                        <option value="18">Other Rabi pulses</option>
+                        <option value="21">Ragi</option>
+                        <option value="26">Soyabean</option> 
+                              </select>
+                              <select id="year" name="b" class="form-control col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                        <option selected="" value="" disabled selected>Select Year</option>
+                        <option value="0">2020</option>
+                        <option value="1">2021</option> 
+                        <option value="2">2022</option>
+                        <option value="3">2023</option> 
+                        <option value="4">2024</option> 
+                        <option value="5">2025</option> 
+                        <option value="6">2026</option> 
+                        <option value="7">2027</option>  
+                        <option value="8">2028</option> 
+                        <option value="9">2029</option>
+                        <option value="10">2030</option>  
+                        <option value="11">2031</option> 
+                        <option value="12">2032</option> 
+                        <option value="13">2033</option> 
+                        <option value="14">2034</option> 
+                        <option value="15">2035</option>
+                        <option value="16">2036</option>
+                        <option value="17">2037</option>
+                        <option value="18">2038</option>
+                        <option value="19">2039</option>
+                        <option value="20">2040</option>
+                        <option value="21">2041</option>
+                        <option value="22">2042</option>
+                        <option value="23">2043</option>
+                        <option value="24">2044</option>
+                        <option value="25">2045</option>
+                        <option value="26">2046</option>
+                        <option value="27">2047</option>
+                        <option value="28">2048</option>
+                        <option value="29">2049</option>
+                        <option value="30">2050</option>
+                              </select>
+                              <input type="text" name="e" placeholder="Enter Area(in hectare)" class="form-control col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                               <input type="text" name="f" placeholder="Enter Rainfall(in mm)" class="form-control col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                                <input type="text" name="g" placeholder="Enter Temperature(in °C)" class="form-control col-xs-3 col-sm-3 col-md-3 d-inline-block m-1">
+                                <br>
+                             <button type="submit" class="btn rounded ex_btn">Predict</button>
+                  </form>
+          <br>
+          <h3> {{ prediction_text }}</h3></center>
+        </div>
+        
+      </div>
+    </section>
+    <section id="team">
+      <div class="col-10 mx-auto text-center mt-5 ">
+        <h1>Team</h1>
+        <div class="row ">
+          
+
+          <div class="col-xs-3 col-sm-3 col-md-3" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+                
+                <img src="https://drive.google.com/uc?id=18rsVzEE6faDTRcLYqln_x09fMo4ts2ny" alt="Name" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>Jasmin Patel</h3>
+                <span class="position">18DCS069</span>
+                <span class="position"><a href="mailto:18dcs069@charusat.edu.in">Contact me</a></span>  
+              </div>
+            </div>
+          </div>
+
+ <div class="col-xs-3 col-sm-3 col-md-3" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+                
+                <img src="https://drive.google.com/uc?id=1t3z-SBynWwAANWIALtqGrPi79ZaauVPz" alt="Name" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>Kaivel Patel</h3>
+                <span class="position">18DCS071</span>
+                  <span class="position"><a href="mailto:18dcs071@charusat.edu.in">Contact me</a></span>  
+              </div>
+            </div>
+          </div>
+
+ <div class="col-xs-3 col-sm-3 col-md-3" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+                
+                <img src="https://drive.google.com/uc?id=1ut4P9o6WMR8MEzGXrmzZRoAtpCQK0oM9" alt="Name" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>Bhavya Ramani</h3>
+                <span class="position">18DCS097</span>
+                  <span class="position"><a href="mailto:18dcs097@charusat.edu.in">Contact me</a></span>  
+              </div>
+            </div>
+          </div>
+
+ <div class="col-xs-3 col-sm-3 col-md-3" data-aos="fade-up" data-aos-delay="">
+            <div class="team-member">
+              <figure>
+                
+                <img src="https://drive.google.com/uc?id=1XG3vL74D_mHkpe8CbQAPE99e0zKbLWMH" alt="Name" class="img-fluid">
+              </figure>
+              <div class="p-3">
+                <h3>Hussain Saherwala</h3>
+                <span class="position">18DCS101</span>
+                  <span class="position"><a href="mailto:18dcs101@charusat.edu.in">Contact me</a></span>  
+              </div>
+            </div>
+          </div>
+
+
+          
+
+          
+        </div>
+      </div>
+    </section>
+    
+   <div>
+<img src="https://drive.google.com/uc?id=1sxEtPCmR_teIfFUJk8_9YWx-zFKvnB5V" class="img-fluid se_imgg">
+</div>
+   <section class="footers "  >
+    <footer style=" height: 25vh; overflow: hidden;" class="bg-light ">
+      <div class="d-flex justify-content-between align-items-center align-middle footer pl-1 pt-5 mt-3">
+      <h3 class="ft_rsm">Kisan Sathi</h3>
+      <h5 class="align-self-center ml-2 ml-sm-0 fintro ">Predict crop @ just one click</h5>
+      </div>
+      
+      
+      </footer>
+ </section>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+    <script>
+           document.querySelector('.toggler').onclick = () => {
+    document.querySelector('.nav').classList.toggle('open');
+   }
+   if ($(window).width() < 766) {
+
+            $(".nav-link").click(function(){
+                       $(".toggler").click();
+
+        });
+          }
+        $(window).resize(function() {
+          if ($(window).width() < 766) {
+            $(".nav-link").click(function(){                
+                $(".toggler").click();
+
+        });
+          }
+        });
+        
+   (function ($) {
+            $(document).ready(function () {
+                $('a.nav-link[href*="#"]').off();
+                $(document).on('click', 'a.nav-link[href*="#"]', function (e) {
+
+                    e.preventDefault();
+                    // console.log($(this).attr('href'));
+                    var hash = '#' + $(this).attr('href').split('#')[1];
+
+                    $('html, body').stop().animate({
+                        scrollTop: $(hash).offset().top - 71
+                    });
+                });
+            });
+        })(jQuery);
+        </script>
+        
+        
+    </body>
+</html>

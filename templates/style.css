@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background-color: #ffffff;
+      
+}
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.nav {
+  background: #fff;
+  width: 100%;
+  height: 55px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 5px 5px 40px;
+  transition: height .5s ease-in-out;
+  position: fixed;
+}
+.nav-brand, .nav-link, .nav-collapse {
+  display: inline-block;
+}
+.nav-brand, .nav-link {
+  color: #000;
+  text-decoration: none;
+  line-height: 55px;
+  padding: 0 1rem;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.nav-brand {
+      font-size: 2rem;
+    font-weight: 900;
+    color: #416d05;
+}
+.nav-brand:hover {
+      font-size: 2rem;
+    font-weight: 900;
+   color: #416d05;
+    text-decoration: none !important;
+}
+.nav-link {
+  font-size: 1rem;
+}
+.nav-collapse {
+  float: right;
+}
+.toggler {
+  float: right;
+  width: 40px;
+  height: 18px;
+  margin: 18.5px 0;
+  background: none;
+  border: none;
+  outline: none;
+  display: none;
+  opacity: 0.8;
+}
+.toggler span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  position: relative;
+  transition: .25s ease-in-out;
+}
+.toggler span:nth-child(1) {
+  top: -7.5px;
+}
+.toggler span:nth-child(2) {
+  top: 0;
+}
+.toggler span:nth-child(3) {
+  top: 7.5px;
+}
+
+.nav-brand:hover, .nav-link:hover, .toggler:hover, 
+.nav-brand:focus, .nav-link:focus, .toggler:focus {
+  opacity: 1;
+}
+
+.nav.open .toggler span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.nav.open .toggler span:nth-child(2) {
+  transform: translateX(-100%);
+  width: 0;
+  opacity: 0;
+}
+.nav.open .toggler span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+.nav.open {
+  height: 100vh;
+}
+
+@media (max-width: 767px) {
+  .nav-collapse, .nav-link {
+    float: none;
+    display: block;
+  }
+  .nav-link {
+    text-align: center;
+  }
+  .toggler {
+    display: block;
+  }
+}
+
+.hero_clr{
+    color: #589507;
+    font-weight: 900;
+}
+
+.ex_btn{
+  background-color: #589507; color: #FFF;
+}
+
+.content-wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.footers{
+ 
+}
+.fintro{
+  font-size: 1rem;
+}
+.ft_rsm{
+  font-weight: 900;
+  font-size: 2rem;
+  color: #678a37;
+}
+
+.se_imgg{
+  width: 100%;
+}
+
+
+.lgform{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+}
+
+
+
+.totalbox{
+  width: 40%;
+  height: auto;
+
+  margin: auto;
+  padding: 10px 30px; 
+  background: #fff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(57, 255, 20, 0.2), 0 5px 5px 0 rgba(57, 255, 20, 0.24);
+}
+
+.loginForm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input{
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+outline: 0;
+background: #f2f2f2;
+}
+
+.boxcheckbox{
+margin-top: 10px;
+}
+
+button{
+margin-top: 20px;
+}
+
+.loginbtn{
+  background: #003399;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+.loginbtn:hover,
+.loginbtn:focus{
+  background:  #003399;
+}
+
+.boxcheckbox label{
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .totalbox{
+      width: 90%;
+  }
+}
+
+.card-body-icon {
+  position: absolute;
+  z-index: 0;
+  top: 10px;
+  right: 10px;
+  font-size: 32px;
+  font-size: 5rem;
+  opacity: 0.3;
+}
+
+
+.label-container{
+	
+	display:table;
+	
+}
+
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+}
+
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+  color:#333;
+  transform: rotate(180deg);
+	opacity:0.5;
+}
