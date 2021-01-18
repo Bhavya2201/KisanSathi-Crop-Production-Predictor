@@ -1,4 +1,4 @@
-# KisanSathi-Crop-PRoduction-Predictor
+# KisanSathi-Crop-Production-Predictor
 
 A simple flask bassed webapp which can predict the crop yield given parameters like crop, area, rainfall and temperature.
 
